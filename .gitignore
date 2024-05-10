@@ -396,3 +396,19 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+##
+## Visual Studio Code
+##
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+##
+## Leave appSettings.[ENV].json in local repo delibrately
+##
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
