@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-CardStatusChangeConsumingService-2edb78eb-982d-4ca8-93b9-439a0a1c2618</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.2.2" />
+    <PackageReference Include="MassTransit.AmazonSQS" Version="8.2.2" />
+    <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="8.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MessageContract\MessageContract.csproj" />
+  </ItemGroup>
+</Project>

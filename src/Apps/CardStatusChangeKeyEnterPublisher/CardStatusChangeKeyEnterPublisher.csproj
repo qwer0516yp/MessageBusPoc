@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-CardStatusChangeKeyEnterPublisher-ac043778-8151-4119-985d-adeccf293de3</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.2.2" />
+    <PackageReference Include="MassTransit.AmazonSQS" Version="8.2.2" />
+    <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="8.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MessageContract\MessageContract.csproj" />
+  </ItemGroup>
+</Project>
