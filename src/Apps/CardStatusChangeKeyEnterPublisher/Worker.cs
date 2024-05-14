@@ -34,7 +34,7 @@ public class Worker : BackgroundService
                 await _bus.Publish(message, stoppingToken);
                 _logger.LogInformation("Published CardStatusChange.{message}", message);
 
-                await Task.Delay(100, stoppingToken);
+                await Task.Delay(10, stoppingToken);
             }
             else
             {
@@ -69,9 +69,4 @@ public class Worker : BackgroundService
             }
         };
     }
-
-    //private MultiCardArtDto GetMockMultiCardArtDto(ConsoleKey key)
-    //{
-    //    var cardStatusChangeDto = GetMockMessage(key);
-    //}
 }

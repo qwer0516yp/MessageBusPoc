@@ -35,6 +35,21 @@ builder.Services.AddMassTransit(x =>
             });
             break;
 
+        /******* demo 4, RabbitMQ **********/
+        //Reference: https://masstransit.io/quick-starts/rabbitmq
+        case "RabbitMQ":
+            x.UsingRabbitMq((context, cfg) =>
+                {
+                    cfg.Host("localhost", "/", h =>
+                    {
+                        h.Username("guest");
+                        h.Password("guest");
+                    });
+
+                    cfg.ConfigureEndpoints(context);
+                });
+            break;
+
         /******** demo 1, InMemory ***********/
         case "InMemory":
         default:
@@ -42,7 +57,7 @@ builder.Services.AddMassTransit(x =>
             {
                 config.ConfigureEndpoints(context);
             });
-            transportType = "InMemory"; 
+            transportType = "InMemory";
             break;
     }
 
