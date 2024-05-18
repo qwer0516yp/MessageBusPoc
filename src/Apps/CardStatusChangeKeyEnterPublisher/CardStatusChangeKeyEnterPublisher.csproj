@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-CardStatusChangeKeyEnterPublisher-ac043778-8151-4119-985d-adeccf293de3</UserSecretsId>
+    <UserSecretsId>MessageBusPoc</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

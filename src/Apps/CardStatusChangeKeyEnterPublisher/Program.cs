@@ -16,10 +16,10 @@ builder.Services.AddMassTransit(x =>
         case "AmazonSQS":
             x.UsingAmazonSqs((context, config) =>
             {
-                config.Host(massTransitConfig["AmazonSQS:Region"], h =>
+                config.Host(builder.Configuration["AmazonSQS:Region"], h =>
                 {
-                    h.AccessKey(massTransitConfig["AmazonSQS:AccessKey"]);
-                    h.SecretKey(massTransitConfig["AmazonSQS:SecretKey"]);
+                    h.AccessKey(builder.Configuration["AmazonSQS:AccessKey"]);
+                    h.SecretKey(builder.Configuration["AmazonSQS:SecretKey"]);
                 });
                 config.ConfigureEndpoints(context);
             });
@@ -30,7 +30,7 @@ builder.Services.AddMassTransit(x =>
         case "AzureServiceBus":
             x.UsingAzureServiceBus((context, config) =>
             {
-                config.Host(massTransitConfig["AzureServiceBus:ConnectionString"]);
+                config.Host(builder.Configuration["AzureServiceBus:ConnectionString"]);
                 config.ConfigureEndpoints(context);
             });
             break;

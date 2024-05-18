@@ -8,6 +8,7 @@ public record CardStatusChangeDto
     public string? Card2 { get; init; }
     public string? Expiry2 { get; init; }
     public required string CardStatusCode { get; init; }
+    public string? FromCardStatusCode { get; init; }
 
     //Add-on
     public string? BrandCode { get; init; }
